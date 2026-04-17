@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfume Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: #ff3e6c;
+            font-weight: bold;
+        }
+
+        button {
+            background: #ff6f91;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center">Perfume Collection</h2>
+
+    <section class="products">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9">
+            <h3>Luxury Oud Perfume</h3>
+            <p class="price">₹1299</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569">
+            <h3>Bellavita Perfume</h3>
+            <p class="price">₹999</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img
+                src="data:image/jpeg;base64,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">
+            <h3>Luxuriate Oud Perfume</h3>
+            <p class="price">₹2599</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTQ0MNZXTPQfAYum0f5jnuWMJOeAJnbr9jyjxxL74XLFH1BK457SjRydEO9Mf6GF5LTiLpuNXhNGkO09bW8AFq4JUyf3941nQo1MfCQRZg17-ZZRTYMio8K">
+            <h3>Chanel Coco Women Perfume</h3>
+            <p class="price">₹1799</p>
+            <button>Add to Cart</button>
+        </div>
+
+    </section>
+
+    <footer style="text-align:center;padding:15px">
+        © 2026 BeautyKart | Perfumes
+    </footer>
+
+</body>
+
+</html>
+
+
+
+

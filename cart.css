@@ -57,12 +57,24 @@ body {
    outline: oklab(a b);
  }
 @media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
     .search-box {
-        width: 100%;
-        right: 10px;
+        position: static;   /* absolute position hatao */
+        width: 100%;        /* poori width lo */
+        margin: 8px auto 0; /* center mein */
+        right: auto;
+        box-sizing: border-box;
+    }
+
+    .search-box input {
+        width: 100%; /* input bhi full width */
     }
 }
-
 
 
 

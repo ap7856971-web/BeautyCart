@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | BeautyCart</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, white);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            width: 360px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2874f0;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .input-box input:focus {
+            outline: none;
+            border-color: #2874f0;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #2874f0;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #0b5ed7;
+        }
+
+        .extra {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .extra a {
+            color: #2874f0;
+            text-decoration: none;
+        }
+
+        .extra a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>BeautyCart Login</h2>
+
+        <div class="input-box">
+            <input type="email" id="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button class="login-btn" onclick="login()">Login</button>
+
+        <div class="error" id="errorMsg"></div>
+
+        <div class="extra">
+            Don’t have an account?
+            <a href="register.html">Create Account</a>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let error = document.getElementById("errorMsg");
+
+            if (email === "" || password === "") {
+                error.innerText = "Please fill all fields";
+                return;
+            }
+
+            // Demo login (frontend only)
+            if (email === "admin@beautycart.com" && password === "123456") {
+                alert("Login Successful 🎉");
+                window.location.href = "index.html";
+            } else {
+                error.innerText = "Invalid Email or Password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beautyart – Skin Care & Perfume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h2 class="logo">Beauty<span>Cart</span></h2>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for products, brands and more...">
+            <button onclick="searchProduct()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.867-3.834zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+                </svg></button>
+        </div>
+
+        <a href="login.html">
+            <img src="https://cdn-icons-png.flaticon.com/128/2321/2321232.png" class="login-logo">
+        </a>
+
+
+
+        <a href =  "cart.html" class="cart-btn" class="cart-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-shopping-bag h-5 w-5 text-foreground/70 hover:text-primary transition-colors">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <path d="M3 6h18"></path>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg> (<span id="cart-count">0</span>)</a>
+    </header>
+    <nav>
+        <a href="Skin Care.html">Skin Care</a>
+        <a href="Perfumes.html">Perfumes</a>
+        <a href="Men.html">Men</a>
+        <a href="Women.html">Women</a>
+        <a href="Offers.html">Offers</a>
+    </nav>
+
+
+
+    <section class="products">
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwlySk9xG4KLpFtfN-BWJSKpnOUU8E0ceQKA&s">
+            <h3>Vitamin C Face Cream</h3>
+            
+            <p class="price">₹499</p>
+            <div class="btn-wrap">
+                <button
+                    onclick="addToCart('Vitamin C Face Cream', 499, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwlySk9xG4KLpFtfN-BWJSKpnOUU8E0ceQKA&s')">
+                    ADD TO CART
+                </button>
+
+            </div>
+
+
+        </div>
+
+        </div>
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT57WMhskYs-fMy8ojfMFzBFnVotgGyVDqkWg&s">
+            <h3>Hydrating Face Serum</h3>
+            <p class="price">₹799</p>
+            <!-- <form class="pay-form">
+				<input type="hidden" name="name" value="Hydrating Face Serum">
+				<input type="hidden" name="amount" value="799">
+				<input type="hidden" name="description" value="Hydrating Face Serum Buying">
+				<input type="submit" value="Pay Now">
+			</form> -->
+
+
+            <div class="btn-wrap">
+                <button class="add-to-cart"
+                    onclick="addToCart('Hydrating Face Serum', 799, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT57WMhskYs-fMy8ojfMFzBFnVotgGyVDqkWg&s')">ADD
+                    TO CART</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71H4L0G8OIL._AC_UF350,350_QL80_.jpg">
+            <h3>Luxury Oud Perfume</h3>
+            <p class="price">₹1299</p>
+            <button
+                onclick="addToCart('Luxury Oud Perfume', 1299, 'https://m.media-amazon.com/images/I/71H4L0G8OIL._AC_UF350,350_QL80_.jpg')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img
+                src="https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/25217528/2023/10/5/cd661bc2-6af8-4dbd-a4cd-63ecba04a7ce1696485197779StreaxSetof2HairSerumPhilipsHairDryerFreeGiftsSmashboxWomenP1.jpg">
+            <h3>Bellavita Perfume</h3>
+            <p class="price">₹999</p>
+            <button
+                onclick="addToCart('Bellavita Perfume', 999, 'https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/25217528/2023/10/5/cd661bc2-6af8-4dbd-a4cd-63ecba04a7ce1696485197779StreaxSetof2HairSerumPhilipsHairDryerFreeGiftsSmashboxWomenP1.jpg')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img
+                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4N2M4UUogSvlszdKiU_7vG3PTiqI7LeaUcRSB5kYsxq0PpQuy6B4xDMrgYFkAz-uuBum-mUxE00uGfdHwSOlCYlHO3EfF2L4EurH0NlgzANwvI3lWSOQbVg">
+            <h3>Minimalist Face Washe</h3>
+            <p class="price">₹1299</p>
+            <button
+                onclick="addToCart('Minimalist Face Wash', 1299, 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4N2M4UUogSvlszdKiU_7vG3PTiqI7LeaUcRSB5kYsxq0PpQuy6B4xDMrgYFkAz-uuBum-mUxE00uGfdHwSOlCYlHO3EfF2L4EurH0NlgzANwvI3lWSOQbVg')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-eYADfc4niiu2qcToxOXCafgGhgcDaJy7w&s">
+            <h3>Moisturizing Emulsion</h3>
+            
+            <p class="price">₹990</p>
+            <button
+                onclick="addToCart('Moisturizing Emulsion', 990,  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-eYADfc4niiu2qcToxOXCafgGhgcDaJy7w&s')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQRLQBWKepIwg_W-izi7McvDU9quDaaIroTHAXP9h2NHQrsz0y5Sj2ulyWqteuf1pFUGscQ0MvXKDXKhLN1Qy1pYaKAkL1XY7MorwToisyPTiGm4f-EyS7x64fyIA5pPs105d8Tsg8&usqp=CAc">
+            <h3>Cetaphil Cleanser</h3>
+            <p class="price">₹359</p>
+            <button
+                onclick="addToCart('Cetaphil Cleanser', 359, 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQRLQBWKepIwg_W-izi7McvDU9quDaaIroTHAXP9h2NHQrsz0y5Sj2ulyWqteuf1pFUGscQ0MvXKDXKhLN1Qy1pYaKAkL1XY7MorwToisyPTiGm4f-EyS7x64fyIA5pPs105d8Tsg8&usqp=CAc')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEj_KOJCjAPlY44wvUDOpJC-6YWfrTUNHLQw&s">
+            <h3>Luxuriate Oud Perfume</h3>
+            <p class="price">₹2599</p>
+            <button
+                onclick="addToCart('Luxuriate Oud Perfume', 2599, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEj_KOJCjAPlY44wvUDOpJC-6YWfrTUNHLQw&s')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTynPB2e1hlyWlSWjjmJXw1PiI6n0ieBmJjYADBjKGV2PNH3nm2jLy6ZsWn-nKZEU7fz4mxdQcwX8Duf9-VluFG0Skt50cjzaT4fRfEuBe7tK1TwrOpcpTfKGMwVH_KuSXBzHce62k&usqp=CAc">
+            <h3>LVedicderm Cream</h3>
+            <p class="price">₹1599</p>
+            <button
+                onclick="addToCart('Vedicderm Cream', 1599, 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTynPB2e1hlyWlSWjjmJXw1PiI6n0ieBmJjYADBjKGV2PNH3nm2jLy6ZsWn-nKZEU7fz4mxdQcwX8Duf9-VluFG0Skt50cjzaT4fRfEuBe7tK1TwrOpcpTfKGMwVH_KuSXBzHce62k&usqp=CAc')">
+                ADD TO CART
+            </button>
+        </div>
+        <div class="product">
+            <img
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTQ0MNZXTPQfAYum0f5jnuWMJOeAJnbr9jyjxxL74XLFH1BK457SjRydEO9Mf6GF5LTiLpuNXhNGkO09bW8AFq4JUyf3941nQo1MfCQRZg17-ZZRTYMio8K">
+            <h3>Chanel Coco Women Perfume</h3>
+            <p class="price">₹1799</p>
+            <button
+                onclick="addToCart('Chanel Coco Women Perfume', 1799, 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTQ0MNZXTPQfAYum0f5jnuWMJOeAJnbr9jyjxxL74XLFH1BK457SjRydEO9Mf6GF5LTiLpuNXhNGkO09bW8AFq4JUyf3941nQo1MfCQRZg17-ZZRTYMio8K')">
+                ADD TO CART
+            </button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Brand Info -->
+            <div class="footer-col">
+                <h2 class="brand">Beauty<span>Cart</span></h2>
+                <p>
+                    Your destination for premium skincare and luxury fragrances.
+                    Experience beauty that empowers.
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                    <a href="http://www.linkedin.com/in/aditya-pal-1aba06367" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="#0077b5">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg></a>
+
+                    <a href="https://twitter.com" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153ZM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644Z"
+                                fill="currentColor" />
+                        </svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Skin Care</a></li>
+                    <li><a href="#">Perfumes</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="footer-col">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail h-4 w-4 text-primary">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg> support@beautycart.com</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone h-4 w-4 text-primary">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg> +91 7505773595</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin h-4 w-4 text-primary flex-shrink-0 mt-0.5">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                        </path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>Muzaffarnagar, Uttar Pardesh, India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 BeautyCart | Skin Care & Perfume Store. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function searchProduct() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                let name = product.querySelector("h3").innerText.toLowerCase();
+
+                if (name.includes(input)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
